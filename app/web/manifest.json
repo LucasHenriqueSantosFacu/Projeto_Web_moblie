@@ -1,6 +1,6 @@
 {
-    "name": "app",
-    "short_name": "app",
+    "name": "aula2",
+    "short_name": "aula2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
