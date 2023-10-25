@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #92badb;
+    background: #9ec7e9;
     padding: 1rem;
 }
 
@@ -50,29 +50,6 @@ body {
     margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
-}
-
-.login-button {
-    display: flex;
-    align-items: center;
-}
-
-.login-button button {
-    border: none;
-    background-color: #0E45B7;
-    padding: 0.7rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button button:hover {
-    background-color: #376fdd;
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #ffff;
 }
 
 .form-header h1::after {
@@ -125,7 +102,7 @@ body {
     color: #000000be;
 }
 
-.continue-button button {
+.login-button button {
     width: 100%;
     margin-top: 2.5rem;
     border: none;
@@ -135,15 +112,41 @@ body {
     cursor: pointer;
 }
 
-.continue-button button:hover {
+.login-button button:hover {
     background-color: #376fdd;
 }
 
-.continue-button button a {
+.login-button button a {
     text-decoration: none;
     font-size: 0.93rem;
     font-weight: 500;
     color: #ffff;
+}
+
+.cadastre {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: small;
+}
+
+.cadastro-button {
+    display: flex;
+    align-items: center;
+}
+
+.cadastro-button button {
+    border: none;
+    background-color: #ffff;
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cadastro-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0E45B7;
 }
 
 @media screen and (max-width: 1330px) {
@@ -166,7 +169,7 @@ body {
         height: auto;
     }
 
-    .input-group{
+    .input-group {
         flex-direction: column;
         overflow-y: scroll;
         flex-wrap: nowrap;
