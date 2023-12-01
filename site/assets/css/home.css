@@ -68,7 +68,7 @@ ul li.item-menu a .icon {
 }
 
 div li.prontuario,
-.receita {
+.receita, .atestado {
     width: 40%;
     margin-left: 150px;
     margin-top: 40px;
@@ -77,7 +77,7 @@ div li.prontuario,
     border-radius: 10px;
 }
 
-div li.prontuario a, .receita a{
+div li.prontuario a, .receita a, .atestado a{
     color: #ffff;
     text-decoration: none;
     font-size: 20px;
@@ -85,6 +85,6 @@ div li.prontuario a, .receita a{
     display: flex;
 }
 
-div li.prontuario .txt-link, .receita .txt-link{
+div li.prontuario .txt-link, .receita .txt-link, .atestado .txt-link{
     margin-left: 10px;
 }
