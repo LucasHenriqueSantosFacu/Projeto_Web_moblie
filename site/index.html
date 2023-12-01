@@ -5,14 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/index.css">
-    <title>Home</title>
+    <title>Login</title>
+
 </head>
 
 <body>
-    <h1>Logado</h1>
+    <div class="container">
+        <div class="form-image">
+            <img src="./assets/img/undraw_medicine_b-1-ol.svg">
+        </div>
 
-    <button onclick="sair()">Sair</button>
+        <div class="form">
+            <form id="login">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Login</h1>
+                    </div>
+                </div>
 
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+                <div class="login-button">
+                    <button type="submit" onclick="logar()" value="Entrar" id="btn-login">Entrar</button>
+                </div>
+
+                <div class="cadastre">
+                    <label>Não possiu cadastro?</label>
+                    <div class="cadastro-button">
+                        <button><a href="./assets/html/signup.html">Cadastre-se</a></button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
     <script src="./assets/js/index.js"></script>
 </body>
 

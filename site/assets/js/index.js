@@ -1,15 +1,48 @@
-if(localStorage.getItem("token") == null){
-    alert("Você precisa entar logado para acessar essa página");
-    window.location.href = "./assets/html/login.html";
-}
+const express = require("express");
+const router = express.Router();
+exports.router = router;
+const path = require("path");
+const bodyParser = require("body-parser");
 
-let userLogado = JSON.parse(localStorage.getItem("userLogado"));
+const app = express();
+exports.app = app;
+const bd = require('../../src/dao/db');
+const Usuario = require('../../src/models/usuario');
+const UsuarioController = require('../../src/controller/usuario_controller');
 
-let logado = document.querySelector("#logado");
-logado.innerHTML = 'Olá ${userLogado.nome}';
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(UsuarioController);
 
-function sair(){
-    localStorage.removeItem("token");
-    localStorage.removeItem("userLogado");
-    window.location.href = "./assets/html/login.html";
+app.listen(3306, () => {
+    console.log("Servidor rodando")
+});
+
+function logar() {
+    var email = document.getElementById('email').value
+    var password = document.getElementById('password').value
+
+    console.log(JSON.stringify({
+        email: email,
+        password: password
+    }));
+
+    fetch("login", {
+        method: 'POST',
+        body: JSON.stringify({
+            email: email,
+            password: password
+        }),
+        headers: { "content-type": "application/json" }
+    })
+
+        .then(async (resp) => {
+            var status = await resp.text();
+            console.log(status)
+            if (status == 'conectado') {
+                location.href = '../html/home.html'
+            } else {
+                alert('Email ou Senha incorretos')
+            }
+        })
 }
